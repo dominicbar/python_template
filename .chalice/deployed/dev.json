@@ -14,8 +14,8 @@
     {
       "name": "rest_api",
       "resource_type": "rest_api",
-      "rest_api_id": "fxzskm2h62",
-      "rest_api_url": "https://fxzskm2h62.execute-api.ap-south-1.amazonaws.com/dev/"
+      "rest_api_id": "ojngz4dkc2",
+      "rest_api_url": "https://ojngz4dkc2.execute-api.ap-south-1.amazonaws.com/dev/"
     }
   ],
   "schema_version": "2.0",
