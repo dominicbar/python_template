@@ -1,0 +1,36 @@
+{
+  "version": "2.0",
+  "app_name": "MiscMobileDiagnosticsService",
+  "stages": {
+    "dev": {
+      "app_name": "MiscMobileDiagnosticsService-dev",
+      "api_gateway_stage": "dev",
+      "environment_variables": {
+        "ENV_NAME": "dev"
+      }
+    },
+    "test": {
+      "app_name": "MiscMobileDiagnosticsService-test",
+      "api_gateway_stage": "test",
+      "environment_variables": {
+        "ENV_NAME": "test"
+      }
+    },
+    "sandbox": {
+      "app_name": "MiscMobileDiagnosticsService-sandbox",
+      "api_gateway_stage": "sandbox",
+      "environment_variables": {
+        "ENV_NAME": "sandbox"
+      }
+    },
+    "prod": {
+      "app_name": "MiscMobileDiagnosticsService-prod",
+      "api_gateway_stage": "prod",
+      "environment_variables": {
+        "ENV_NAME": "prod"
+      }
+    }
+  }
+}
+
+

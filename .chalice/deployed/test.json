@@ -1,0 +1,23 @@
+{
+  "resources": [
+    {
+      "name": "default-role",
+      "resource_type": "iam_role",
+      "role_arn": "arn:aws:iam::399029391937:role/MiscMobileDiagnosticsService-test",
+      "role_name": "MiscMobileDiagnosticsService-test"
+    },
+    {
+      "name": "api_handler",
+      "resource_type": "lambda_function",
+      "lambda_arn": "arn:aws:lambda:ap-south-1:399029391937:function:MiscMobileDiagnosticsService-test"
+    },
+    {
+      "name": "rest_api",
+      "resource_type": "rest_api",
+      "rest_api_id": "mvzq6lgkd5",
+      "rest_api_url": "https://mvzq6lgkd5.execute-api.ap-south-1.amazonaws.com/test/"
+    }
+  ],
+  "schema_version": "2.0",
+  "backend": "api"
+}
