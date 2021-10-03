@@ -67,6 +67,7 @@ def getAccessorId(mobileId):
         cursor=openDataBaseConnection()
         cursor.execute('''SELECT "accessorId"  FROM accessors_mobiles where "mobileId" = {}'''.format(mobileId))
         accessorId=cursor.fetchone()
+        
         if accessorId != None:
             for item in accessorId:
                 accessorId=item
@@ -79,12 +80,12 @@ def getAccessorId(mobileId):
             }
             response=json.dumps(response)
             return Response(body=response, status_code=200, headers={'Content-Type': 'application/json'})
-        else:
-            responseSubMessage['errorCode'] = 1004
+        elif accessorId==None:
+            responseSubMessage['errorCode'] = 2001
             responseSubMessage['errorMessage'] = 'accessorId not found for particular mobileId'
             responseMessage['type'] = 'error'
             responseMessage['message'] = responseSubMessage
-            return Response(body=responseMessage, status_code=1004, headers={'Content-Type': 'application/json'})
+            return Response(body=responseMessage,headers={'Content-Type': 'application/json'})
 
         
     except Exception as e:
