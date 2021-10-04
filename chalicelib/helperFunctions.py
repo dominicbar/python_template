@@ -1,6 +1,7 @@
 from chalice import Blueprint
 from chalice import Response
 import os
+from chalice.app import APIGateway
 import psycopg2
 import json
 import datetime
@@ -61,7 +62,7 @@ def openDataBaseConnection():
         print(responseMessage)
         return Response(body=responseMessage, status_code=401, headers={'Content-Type': 'application/json'})
 
-@helperFunctions.route('/mobileDiagnosticsService/v1/mobile/{mobileId}/accessorId', methods=['GET'], cors=True)
+@helperFunctions.route('/mobileDiagnosticsService/v1/mobile/{mobileId}/accessorId', methods=['GET'],api_key_required=True)
 def getAccessorId(mobileId):
     try:
         cursor=openDataBaseConnection()
