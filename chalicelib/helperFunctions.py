@@ -86,7 +86,7 @@ def getAccessorId(mobileId):
             responseSubMessage['errorMessage'] = 'accessorId not found for particular mobileId'
             responseMessage['type'] = 'error'
             responseMessage['message'] = responseSubMessage
-            return Response(body=responseMessage,headers={'Content-Type': 'application/json'})
+            return Response(body=responseMessage,status_code=404,headers={'Content-Type': 'application/json'})
 
         
     except Exception as e:
